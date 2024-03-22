@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>路</title>
+</head>
+
+<style>
+  /* 大背景 */
+  .init {
+    position: relative;
+    width: 450px;
+    height: 720px;
+    margin: 0 auto;
+    background: url(../Pic/1背景.png) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    /* object-fit: cover; */
+  }
+
+  /* 上边 */
+  .init .rb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 450px;
+    height: 120px;
+    background: url(../Pic/1边.png) no-repeat center;
+    background-size: cover;
+    /* animation: g_sc 1s alternate infinite; */
+  }
+
+  /* 天安门 */
+  .init .tam {
+    position: absolute;
+    bottom: 40px;
+    width: 450px;
+    height: 360px;
+    background: url(../Pic/1天安门.png) no-repeat center;
+    background-size: cover;
+  }
+
+  /* 丝带 */
+  .init .st {
+    position: absolute;
+    right: -10px;
+    bottom: -140px;
+    width: 450px;
+    height: 300px;
+    background: url(../Pic/1丝带.png) no-repeat right;
+    background-size: 850px;
+    transform: rotateZ(-20deg);
+    animation: st 1s linear;
+  }
+
+  /* 左鸽子 */
+  .init .lg {
+    position: absolute;
+    left: 0px;
+    top: 45px;
+    width: 260px;
+    height: 180px;
+    background: url(../Pic/1鸽左.png) no-repeat center;
+    background-size: cover;
+    animation: lg_move 1.5s,
+      g_sc 1s 1.5s alternate infinite linear;
+  }
+
+  /* 右鸽子 */
+  .init .rg {
+    position: absolute;
+    right: 0;
+    bottom: 200px;
+    width: 130px;
+    height: 110px;
+    background: url(../Pic/1鸽右.png) no-repeat center;
+    background-size: cover;
+    animation: rg_move 1.5s,
+      g_sc 1s 1.5s alternate infinite linear;
+  }
+
+  /* 文字下衬 */
+  .init .xc {
+    position: absolute;
+    top: 285px;
+    left: 25px;
+    width: 400px;
+    height: 50px;
+    background: url(../Pic/1下衬.png) no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    animation: xc 1s 0.3s forwards,
+      g_sc 1s alternate infinite linear;
+  }
+
+  /* 文字上衬 */
+  .init .sc {
+    position: absolute;
+    top: 145px;
+    left: 25px;
+    width: 400px;
+    height: 50px;
+    background: url(../Pic/1上衬.png) no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    transform-style: preserve-3d;
+    animation: sc 2s 0.3s forwards;
+  }
+
+  .init .title {
+    position: absolute;
+    top: 170px;
+    left: 105px;
+    height: 150px;
+    /* background-color: palegoldenrod; */
+    font-family: cursive;
+    font-size: 80px;
+    font-weight: 600;
+    color: red;
+    line-height: 150px;
+    text-align: center;
+    opacity: 0;
+    animation: Title 1.5s 1s forwards;
+  }
+
+  @keyframes Title {
+    0% {
+      transform: scale(0);
+    }
+
+    40% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes lg_move {
+    0% {
+      left: -260px;
+    }
+
+    80% {
+      left: 0;
+    }
+
+    90% {
+      left: -20px;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes g_sc {
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes rg_move {
+
+    0% {
+      right: -170px;
+    }
+
+    80% {
+      right: 0;
+    }
+
+    90% {
+      right: -20px;
+    }
+
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes xc {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes sc {
+    50% {
+      opacity: 1;
+      transform: rotateY(40deg);
+    }
+
+    90% {
+      opacity: 1;
+      transform: rotateY(0);
+    }
+
+    95% {
+      opacity: 1;
+      transform: rotateY(-10deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotateY(0);
+    }
+  }
+
+  @keyframes st {
+    0% {
+      transform: rotateZ(-20deg) scale(1)
+    }
+
+    50% {
+      transform: rotateZ(-20deg) scale(1.1)
+    }
+
+    100% {
+      transform: rotateZ(-20deg) scale(1)
+    }
+  }
+</style>
+
+<body>
+
+  <div class="init">
+    <div class="rb"></div>
+    <div class="tam"></div>
+    <div class="st"></div>
+    <div class="lg"></div>
+    <div class="rg"></div>
+    <div class="xc"></div>
+    <div class="sc"></div>
+    <div class="title">《路》</div>
+  </div>
+
+  <script>
+    // (() => {
+    //   setTimeout(() => {
+    //     location.href = "./Page1.html"
+    //   }, 4000);
+    // })()
+  </script>
+</body>
+
+</html>
